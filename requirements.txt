@@ -5,11 +5,13 @@ django-filter
 django-cors-headers
 django-model-utils
 django-versatileimagefield
+django-picklefield
 djoser
 markdown
 requests
 Pillow
 python-dotenv
+python-magic
 drf-writable-nested
 django-constance[databese]
 psycopg2-binary
