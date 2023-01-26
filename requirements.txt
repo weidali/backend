@@ -15,4 +15,4 @@ python-magic
 drf-writable-nested
 django-constance[databese]
 psycopg2-binary
-django-ckeditor-5
+django-ckeditor

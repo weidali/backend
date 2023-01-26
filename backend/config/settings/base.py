@@ -42,7 +42,8 @@ THIRD_PARTY = [
     "versatileimagefield",
     "constance",
     "constance.backends.database",
-    'django_ckeditor_5',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 LOCAL_APPS = [
@@ -160,3 +161,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 VENV_PATH = os.path.dirname(BASE_DIR)
 STATIC_ROOT = os.path.join(VENV_PATH, 'static')
 
+CKEDITOR_UPLOAD_PATH = 'ck-uploads/'
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
