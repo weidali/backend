@@ -42,6 +42,7 @@ THIRD_PARTY = [
     "versatileimagefield",
     "constance",
     "constance.backends.database",
+    'django_ckeditor_5',
 ]
 
 LOCAL_APPS = [
@@ -153,6 +154,9 @@ REST_FRAMEWORK = {
 }
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 VENV_PATH = os.path.dirname(BASE_DIR)
-STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
+STATIC_ROOT = os.path.join(VENV_PATH, 'static')
+
