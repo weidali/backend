@@ -2,6 +2,10 @@ import os
 import sys
 
 from pathlib import Path
+from dotenv import load_dotenv
+from datetime import timedelta
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -12,7 +16,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-vjwnz$z!z!&mu5&74q!*wo(j6!bz$4&zh+n^e8qz5ca*))rji_'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'n)wck6_=2-g^lb19vt*y1+c-mmj73!alowbg6j=mhw5e66al=0')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -166,10 +170,10 @@ CONSTANCE_CONFIG = {
     'LANGUAGE': ('EN', 'Select language', 'language_select')
 }
 
-# SIMPLE_JWT = {
-#     'ACCESS_TOKEN_LIFETIME': timedelta(days=14),
-#     'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
-# }
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=14),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+}
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
